@@ -14,6 +14,6 @@ RUN apk add --no-cache --virtual .build-deps \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
     docker-php-ext-install gd && \
     apk del .build-deps && \
-    apk add --update libpng libmcrypt && \
+    apk add --update libpng libmcrypt libjpeg && \
     rm -rf /var/cache/apk/*
 
